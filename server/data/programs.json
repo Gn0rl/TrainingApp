@@ -1,0 +1,22 @@
+[
+    {
+        "id": 0,
+        "name": "Сила (начинающий)",
+        "src": "http://localhost:5000?src=beginer.jpeg"
+    },
+    {
+        "id": 1,
+        "name": "Сила (продолжающий)",
+        "src": "http://localhost:5000?src=опытный.jpeg"
+    },
+    {
+        "id": 2,
+        "name": "Сила (опытный)",
+        "src": "http://localhost:5000?src=продолжающий.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Сила (професионал)",
+        "src": "http://localhost:5000?src=профисионал.jpg"
+    }
+]

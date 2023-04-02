@@ -1,0 +1,99 @@
+[
+    {
+        "name": "Admin",
+        "password": "8",
+        "startWeight": -10,
+        "weight": -1,
+        "isAdmin": true,
+        "programId": "1",
+        "kolPush-ups": "99999",
+        "StartKolPush-ups": "99999999999"
+    },
+    {
+        "name": "Dima",
+        "password": "Dimon",
+        "startWeight": "80",
+        "weight": "70",
+        "kolPush-ups": "10",
+        "StartKolPush-ups": "60",
+        "programId": "2",
+        "darkTheme": "true"
+    },
+    {
+        "name": "Misha",
+        "startWeight": 300,
+        "weight": 1,
+        "password": "&&999443"
+    },
+    {
+        "name": "ElonMask",
+        "startWeight": 75,
+        "weight": 85,
+        "password": "123457"
+    },
+    {
+        "name": "NeScamer",
+        "password": "12345",
+        "startWeight": "90",
+        "weight": "15"
+    },
+    {
+        "name": "Dima2",
+        "password": "9999",
+        "startWeight": "80",
+        "weight": "65",
+        "programId": "1",
+        "kolPush-ups": "15",
+        "StartKolPush-ups": "55"
+    },
+    {
+        "name": "Gaben",
+        "password": "Egg"
+    },
+    {
+        "name": "Admin3",
+        "password": "8",
+        "startWeight": "77",
+        "weight": "60"
+    },
+    {
+        "name": "Admin5",
+        "password": "85",
+        "startWeight": "65",
+        "weight": "45"
+    },
+    {
+        "name": "Юля",
+        "password": "Ula",
+        "startWeight": "55",
+        "kolPush-ups": "5",
+        "weight": "47",
+        "StartKolPush-ups": "20",
+        "programId": "0"
+    },
+    {
+        "name": "What",
+        "password": "GG",
+        "startWeight": "10",
+        "kolPush-ups": "99",
+        "weight": "50",
+        "StartKolPush-ups": "159",
+        "darkTheme": "false",
+        "programId": "3"
+    },
+    {
+        "name": "nagibator3000",
+        "password": "777",
+        "startWeight": "kolWo",
+        "kolPush-ups": "Qw",
+        "weight": "0",
+        "StartKolPush-ups": "0",
+        "programId": "3",
+        "darkTheme": "true"
+    },
+    {
+        "name": "nagibator30",
+        "password": "777",
+        "darkTheme": "true"
+    }
+]
