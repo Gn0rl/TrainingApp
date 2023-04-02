@@ -30,6 +30,11 @@
                     date.innerText = news.date
                     mainText.appendChild(date)
 
+                    const more = document.createElement('a');
+                    more.innerText = "Больше новостей"
+                    more.href = "news"
+                    mainText.appendChild(more)
+
                     console.log(val)
                 });
     })

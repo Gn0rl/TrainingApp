@@ -94,6 +94,10 @@
     {
         "name": "nagibator30",
         "password": "777",
-        "darkTheme": "true"
+        "darkTheme": "true",
+        "startWeight": "0kg",
+        "kolPush-ups": "0",
+        "StartKolPush-ups": "1",
+        "weight": "-1kg"
     }
 ]
