@@ -11,10 +11,10 @@
         fetch('http://localhost:5000/news?id=0')
             .then(res => res.json())
                 .then(val => {
-                    news.title = val.title
-                    news.text = val.text
-                    news.listUpdate = val.listUpdates
-                    news.date = val.date
+                    news.title = val[0].title
+                    news.text = val[0].text
+                    news.listUpdate = val[0].listUpdates
+                    news.date = val[0].date
 
                     for(let i = 0;i < news.listUpdate.length; i++){
                         console.log(news.listUpdate[i]);

@@ -76,7 +76,7 @@ app.get( '/program', ( req, res ) => {
 } )
 
 app.get('/news', (req, res) => {
-    res.json(JSON.parse(fs.readFileSync('data/news.json'))[req.query.id || 0])
+    res.json(JSON.parse(fs.readFileSync('data/news.json')))
 })
 
 app.listen( PORT, function () {
