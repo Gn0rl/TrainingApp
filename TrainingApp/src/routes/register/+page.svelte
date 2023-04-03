@@ -1,7 +1,7 @@
 <main>
     <section>
         <h1>Регистрация</h1>
-        <input type="text" placeholder="имя" bind:value={name}>
+        <input type="text" placeholder="имя" bind:value={name} on:input={() => {if ( !isNaN(Number(name[0])) || name[0] === '-' || name[0] === '=' || name[0] === '+' ) { name = '' }}} >
         <input type="password" placeholder="пароль" bind:value={password}>
         <button on:click={ login }>Зарегистрироваться</button>
         {#if error}
@@ -31,6 +31,7 @@
             }
             localStorage.setItem('name', name)
             localStorage.setItem('user', JSON.stringify(val))
+            location = "/"
         } )
         
     }

@@ -5,7 +5,7 @@
         {objectKey.text}: {user[objectKey.key]}
         {:else}
         {objectKey.text}
-        <input bind:value={objectKey.value}>
+        <input bind:value={objectKey.value} type="number" on:input={() => {if ( objectKey.value < 0 || objectKey.value > 11111 ) objectKey.value = 1} }>
         <button on:click={() => {change(objectKey.key, objectKey.value)}} >Отправить</button>
         {/if}
     </div>
@@ -20,7 +20,7 @@
     <button on:click={() => {user[objectKey.key] = false}}>Изменить</button>
     {:else}
     {objectKey.text}
-    <input bind:value={objectKey.value}>
+    <input bind:value={objectKey.value} type="number" on:input={() => {if ( objectKey.value < 0 || objectKey.value > 11111 ) objectKey.value = 1} }>
     <button on:click={() => {change(objectKey.key, objectKey.value)}} >Отправить</button>
     {/if}
 </div>

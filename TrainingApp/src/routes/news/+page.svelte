@@ -1,45 +1,34 @@
-<div bind:this={main}></div>
+<div style="padding-bottom: 70px;">
+{#each news as news}
+<span style="display: none;">{listUpdate = news.listUpdates}</span>
+
+    <section>
+        <h1>{news.title}</h1>
+        <div>{news.text}</div>
+        <br>
+        <ol>
+            {#each listUpdate as listUpdate }
+                <li>{listUpdate}</li>
+            {/each}
+        </ol>
+        <br>
+        <div>{news.date}</div>
+    </section>
+{/each}
+</div>
 
 <script>
-    import { onMount } from "svelte";
+    let news = new Array()
 
-    let main
+    let listUpdate
 
-    const Update = (val) => {
-        for (const current of val) {
-                        let cur = document.createElement("div")
-                        let curTitle = document.createElement("h1")
-                        curTitle.innerText = current.title
-                        let curText = document.createElement("div")
-                        curText.innerText = current.text
-
-                        let curDate = document.createElement("div")
-                        curDate.innerText = current.date
-
-                        cur.appendChild(curTitle)
-                        cur.appendChild(curText)
-
-                        cur.appendChild(document.createElement("br"))
-
-                        for(let i = 0; i < current.listUpdates.length; i++){
-                            const dir = document.createElement('div');
-                            dir.className = "UpdateList"
-                            dir.innerText = current.listUpdates[i]
-                            cur.appendChild(dir)
-                        }
-
-                        cur.appendChild(document.createElement("br"))
-
-                        cur.appendChild(curDate)
-
-                        main.appendChild(cur)
-                    }
-
-    }
+    import { onMount } from "svelte"
 
     onMount(() => {
-    fetch('http://localhost:5000/news?id=0')
+    fetch('http://localhost:5000/news')
             .then(res => res.json())
-                .then(val => {Update(val)});})
+                .then(val => {news = val
+                console.log(news)})
+            })
 
 </script>

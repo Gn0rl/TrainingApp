@@ -40,6 +40,7 @@
                 if ( val[0].name ) {
                     localStorage.setItem('name', val[0].name)
                     localStorage.setItem('user', JSON.stringify(val[0]))
+                    location = "/"
                 } else {
                     error = true
                 }

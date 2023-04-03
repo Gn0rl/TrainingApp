@@ -2,13 +2,12 @@
 <div bind:this={mainText}><div class="text">{news.text}</div><br/></div>
 <script>
     import { onMount } from "svelte";
-    import { dirty_components } from "svelte/internal";
     
     let mainText;
 
     let news = {title: "load", text: "load", date: "load", listUpdate: []};
     onMount(() => {
-        fetch('http://localhost:5000/news?id=0')
+        fetch('http://localhost:5000/news')
             .then(res => res.json())
                 .then(val => {
                     news.title = val[0].title
@@ -17,7 +16,6 @@
                     news.date = val[0].date
 
                     for(let i = 0;i < news.listUpdate.length; i++){
-                        console.log(news.listUpdate[i]);
                         const div = document.createElement('div');
                         div.className = "UpdateList"
                         div.innerText = news.listUpdate[i]
@@ -34,8 +32,6 @@
                     more.innerText = "Больше новостей"
                     more.href = "news"
                     mainText.appendChild(more)
-
-                    console.log(val)
                 });
     })
 </script>

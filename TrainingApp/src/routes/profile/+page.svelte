@@ -1,5 +1,5 @@
 {#if userLogin}
-    <Profile/>
+    <div class="profile"><Profile /></div>
     {:else}
     <LoginWindow/>
 {/if}
@@ -9,3 +9,9 @@
     let userLogin = localStorage.getItem('name')
     
 </script>
+
+<style>
+    .profile{
+        padding-bottom: 70px;
+    }
+</style>

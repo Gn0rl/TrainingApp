@@ -33,7 +33,8 @@ app.get('/login', (req, res) => {
             res.json(JSON.parse(fs.readFileSync('data/errors.json')))
         }
     }
-    else{
+    else {
+        console.log(JSON.parse(fs.readFileSync('data/errors.json')))
         res.json(JSON.parse(fs.readFileSync('data/errors.json')))
     }
 })
@@ -77,6 +78,10 @@ app.get( '/program', ( req, res ) => {
 
 app.get('/news', (req, res) => {
     res.json(JSON.parse(fs.readFileSync('data/news.json')))
+})
+
+app.get('/startTraining', (req, res) => {
+    res.json([JSON.parse(fs.readFileSync('data/programs.json'))[req.query.id || 0].plan, JSON.parse(fs.readFileSync('data/exercises.json'))])
 })
 
 app.listen( PORT, function () {
