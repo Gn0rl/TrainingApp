@@ -1,7 +1,7 @@
-{#if JSON.parse(localStorage.getItem('user')).programId !== undefined}
+<!-- {#if JSON.parse(localStorage.getItem('user')).programId !== undefined}
 <h1>Начать тренировку</h1>
 <a href="/workout" >Начнем</a>
-{/if}
+{/if} -->
 <h2 class="RecomendationText">Новости:</h2>
 <News/>
 <script>
